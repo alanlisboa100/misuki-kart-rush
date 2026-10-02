@@ -14,3 +14,32 @@ body.racing.boosting #vignette{background:radial-gradient(ellipse at center,tran
 
 #shopDialog .dialog-heading{position:sticky;top:-28px;z-index:3;background:#211b37;padding-top:14px;padding-bottom:5px}button:disabled{cursor:default;opacity:.55}#nickname:focus-visible{outline:3px solid var(--lime);outline-offset:2px}
 @media(max-width:650px){#shopDialog .dialog-heading{top:-20px}}
+
+/* X (Twitter) Login & Profile styles */
+.x-connect-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:#000;color:#fff;border:1px solid #ffffff40;font-weight:700;font-size:15px;padding:14px;border-radius:14px;width:100%;margin:14px 0 10px;transition:background .2s,transform .15s;text-decoration:none}
+.x-connect-btn:hover{background:#16181c;border-color:var(--lime);transform:translateY(-2px);color:#fff}
+.x-icon{width:18px;height:18px;vertical-align:middle;flex-shrink:0}
+.x-separator{display:flex;align-items:center;text-align:center;color:var(--muted);font-size:11px;letter-spacing:1px;margin:18px 0 14px}
+.x-separator::before,.x-separator::after{content:'';flex:1;border-bottom:1px solid #ffffff25}
+.x-separator span{padding:0 12px}
+.x-input-group{display:flex;align-items:center;background:#302942;border:1px solid #ffffff25;border-radius:10px;margin-top:8px;overflow:hidden}
+.x-input-group .at-symbol{padding:0 12px;color:var(--lime);font-weight:bold;font-size:16px}
+.x-input-group input{flex:1;background:transparent;border:0;color:#fff;padding:12px 12px 12px 0;font:inherit}
+.x-input-group input:focus{outline:none}
+.x-profile-card{background:#181427;border:1px solid #ffffff25;border-radius:16px;padding:18px;margin-top:14px}
+.x-user-header{display:flex;align-items:center;gap:14px}
+.x-user-avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid var(--lime);background:#25203a;flex-shrink:0}
+.x-user-info{flex:1;min-width:0}
+.x-user-names{display:flex;align-items:center;gap:8px}
+.x-user-names b{font-size:16px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.x-badge{background:#000;color:var(--lime);font-size:10px;font-weight:900;padding:3px 8px;border-radius:10px;border:1px solid var(--lime);white-space:nowrap}
+.x-handle-tag{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+.x-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0;background:#241d3a;padding:12px 14px;border-radius:12px;text-align:center}
+.x-stat-box small{display:block;font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase}
+.x-stat-box b{font-size:15px;color:var(--lime);margin-top:4px;display:block}
+.x-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.share-x-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:#000;color:#fff;border:1px solid #ffffff35;font-size:13px;font-weight:700;padding:12px 10px;border-radius:12px;cursor:pointer}
+.share-x-btn:hover{background:#16181c;border-color:var(--lime);color:var(--lime)}
+.logout-btn{background:#ffffff10;color:#ff8a8a;border:1px solid #ff4d6d40;font-size:13px;padding:12px 10px;border-radius:12px;cursor:pointer}
+.logout-btn:hover{background:#ff4d6d25;color:#fff}
+

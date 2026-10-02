@@ -22,8 +22,21 @@
 - **Controles Responsivos:**
   - 📱 **Mobile:** Joystick touch virtual, freio, acelerador, botão de drift e turbo nitro.
   - 💻 **PC / Teclado:** `WASD` ou `Setas`, `Espaço` para Turbo, `Shift` para Drift e `Esc` para Pausa.
+- **Login com o 𝕏 (Twitter):** Crie sua conta vinculando seu `@usuario` do 𝕏 ou via OAuth 2.0. Salve moedas (600 de bônus inicial), garagem, compras e recordes!
+- **Compartilhamento Viral no 𝕏:** Compartilhe seu tempo de corrida, volta mais rápida e perfil direto no 𝕏 com 1 clique!
 - **PWA Completo:** Instalável no Android e iOS, pronto para jogar offline.
 - **Áudio & Efeitos:** Efeitos sonoros sintetizados via Web Audio API.
+
+---
+
+## 🔑 Configuração de Login com o 𝕏 (Opcional)
+
+O jogo suporta dois modos de login com o 𝕏:
+1. **Conexão Direta via @Handle (Padrão e instantâneo):** Qualquer jogador pode entrar inserindo seu usuário do 𝕏 (ex: `@MisukiRio`). A garagem, moedas e recordes são sincronizados com a sessão assinada e `localStorage`.
+2. **OAuth 2.0 PKCE Oficial:** Se desejar autenticação com popup oficial do Twitter Developer Portal, basta adicionar no Vercel:
+   - `X_CLIENT_ID`: Client ID do seu app no Twitter Developer Portal.
+   - `X_CLIENT_SECRET`: Client Secret (opcional, para apps confidenciais).
+   - `SESSION_SECRET`: Chave para assinatura segura de cookies/sessões.
 
 ---
 
