@@ -6,6 +6,13 @@
 
 ---
 
+## 🌐 Links Oficiais
+
+- 🎮 **Jogar Online (Vercel):** [https://misuki-kart-rush.vercel.app](https://misuki-kart-rush.vercel.app)
+- 📦 **Repositório GitHub:** [https://github.com/alanlisboa100/misuki-kart-rush](https://github.com/alanlisboa100/misuki-kart-rush)
+
+---
+
 ## 🏎️ Destaques do Jogo
 
 - **9 Pistas 3D:** Cenários variados com curvas, relevos, obstáculos e faixas de aceleração.
