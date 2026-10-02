@@ -1,0 +1,1 @@
+{"name":"misuki-kart-rush","private":true,"type":"module","scripts":{"build":"node scripts/build-worker.mjs","db:generate":"drizzle-kit generate"},"devDependencies":{"drizzle-kit":"0.31.8","drizzle-orm":"0.44.7"}}

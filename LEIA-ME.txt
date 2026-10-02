@@ -1,0 +1,56 @@
+MISUKI KART RUSH — PACOTE COMPLETO v2
+
+Versão publicada: https://misuki-kart-rush.fgsjjjs.chatgpt.site
+
+Inclui:
+- 9 pistas 3D, 12 pilotos e 6 modelos de kart.
+- Joystick, teclado, turbo suave, drift, freio, adversários e minimapa.
+- Loja com moedas obtidas nas corridas.
+- Oficina: carroceria, pintura, rodas e aerofólio.
+- Perfil de piloto vinculado ao login ChatGPT; saldo, itens, garagem e recordes salvos no servidor.
+- PWA: manifesto, ícones e service worker. Corridas disponíveis offline após a primeira carga.
+- Código-fonte, biblioteca Three.js local, backend, schema, migração SQL e Worker compilado.
+
+JOGAR LOCALMENTE (CELULAR / TERMUX / COMPUTADOR)
+
+1. Extraia o ZIP e entre na pasta Misuki_Kart_Rush.
+2. Com Python instalado, execute:
+   python -m http.server 8080 --bind 127.0.0.1 --directory dist
+3. Abra http://127.0.0.1:8080 no navegador.
+
+O servidor Python permite jogar e testar a interface. Ele não executa o backend da conta/loja. A compra e o salvamento da conta precisam do Worker com D1 e da identidade autenticada do servidor.
+Não abra index.html diretamente como arquivo: os módulos JavaScript precisam de um servidor HTTP.
+Para PWA em um endereço remoto, use HTTPS; localhost/127.0.0.1 é a exceção de desenvolvimento.
+
+CÓDIGO E COMPILAÇÃO
+
+- dist/index.html, style.css, game.js e catalog.js: interface, corrida e catálogo.
+- dist/vendor/: biblioteca Three.js incluída, com sua licença MIT.
+- worker/index.mjs: APIs de perfil, compra, garagem, início/fim de corrida e arquivos estáticos.
+- db/schema.ts e drizzle/: schema e migração do banco.
+- scripts/build-worker.mjs: compila o Worker com os arquivos do jogo embutidos.
+- dist/server/index.js: Worker ESM já compilado.
+
+Para recompilar, com Node.js instalado:
+   npm ci
+   npm run build
+
+Ao alterar o schema:
+   npm run db:generate
+   npm run build
+
+PUBLICAR O JOGO COMPLETO
+
+O backend foi feito para Cloudflare Workers com banco D1, gerenciado pelo Sites. O Worker deve receber o binding DB; aplique a migração em drizzle antes de usar as APIs. O manifesto de hospedagem identifica o projeto atual. Para criar uma cópia independente em Sites, registre um projeto novo e substitua seu project_id, sem reutilizar a identidade deste jogo.
+
+As APIs usam o header oai-authenticated-user-id, fornecido pela plataforma após autenticação. Fora do Sites, adapte a autenticação a um provedor confiável e crie esse identificador no servidor. Nunca confie em um header de identidade enviado livremente pelo navegador.
+
+O ZIP contém o código e a estrutura do banco; os saldos, perfis e compras existentes ficam no banco do site publicado e não são exportados neste pacote. Não há senhas, tokens ou credenciais no ZIP. As dependências de desenvolvimento são instaladas por npm ci; node_modules não está incluído.
+
+CONTROLES
+
+Celular: joystick para virar; aceleração automática; botões de freio, acelerar, drift e turbo.
+PC: WASD/setas; Espaço = turbo; Shift = drift; Esc = pausa.
+Ative o som no botão de nota musical.
+
+Conta nova começa com 600 moedas. A loja usa moedas virtuais ganhas nas corridas. Sem conexão, o jogo continua disponível, mas compras e sincronização da conta precisam de internet.

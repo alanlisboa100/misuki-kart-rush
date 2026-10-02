@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "name": "misuki-kart-rush",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "outputDirectory": "dist"
+}
